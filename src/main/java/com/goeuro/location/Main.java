@@ -1,7 +1,6 @@
 package com.goeuro.location;
 
 import com.goeuro.location.controllers.Location2CsvController;
-import com.goeuro.location.models.Location;
 import com.goeuro.location.persistence.CsvFileManager;
 import com.goeuro.location.services.GoEuroApiService;
 

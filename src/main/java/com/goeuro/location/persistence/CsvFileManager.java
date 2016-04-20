@@ -41,16 +41,16 @@ public class CsvFileManager {
         try {
             fileWriter = new FileWriter(fileName, true);
             for (Location location : locations) {
-                fileWriter.append(String.valueOf(location.getId()));
-                fileWriter.append(COMMA);
-                fileWriter.append(location.getName());
-                fileWriter.append(COMMA);
-                fileWriter.append(location.getType());
-                fileWriter.append(COMMA);
-                fileWriter.append(String.valueOf(location.getGeoPosition().getLatitude()));
-                fileWriter.append(COMMA);
-                fileWriter.append(String.valueOf(location.getGeoPosition().getLongitude()));
-                fileWriter.append(NEW_LINE);
+                fileWriter.append(String.valueOf(location.getId()))
+                          .append(COMMA)
+                          .append(location.getName())
+                          .append(COMMA)
+                          .append(location.getType())
+                          .append(COMMA)
+                          .append(String.valueOf(location.getGeoPosition().getLatitude()))
+                          .append(COMMA)
+                          .append(String.valueOf(location.getGeoPosition().getLongitude()))
+                          .append(NEW_LINE);
             }
             closeFileWriter();
 
@@ -62,6 +62,6 @@ public class CsvFileManager {
 
     private void closeFileWriter() throws IOException {
         fileWriter.flush();
-        fileWriter.close();;
+        fileWriter.close();
     }
 }

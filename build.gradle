@@ -14,11 +14,6 @@ jar {
     }
 }
 
-shadowJar {
-    manifest {
-        attributes 'Test-Entry': 'PASSED'
-    }
-}
 
 mainClassName = 'com.goeuro.location.Main'
 
